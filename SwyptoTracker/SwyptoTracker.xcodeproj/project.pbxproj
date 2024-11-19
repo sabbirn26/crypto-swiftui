@@ -14,6 +14,9 @@
 		89EB394F2CEC64C70011C2BD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB394E2CEC64C70011C2BD /* Persistence.swift */; };
 		89EB39522CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39502CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld */; };
 		89EB395A2CEC6CE00011C2BD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39592CEC6CE00011C2BD /* Color.swift */; };
+		89EB39602CEC92390011C2BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB395F2CEC92390011C2BD /* HomeView.swift */; };
+		89EB39642CEC94F20011C2BD /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39632CEC94F20011C2BD /* CircleButtonView.swift */; };
+		89EB39662CEC9EF30011C2BD /* CircleBtnAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39652CEC9EF30011C2BD /* CircleBtnAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		89EB394E2CEC64C70011C2BD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		89EB39512CEC64C70011C2BD /* SwyptoTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwyptoTracker.xcdatamodel; sourceTree = "<group>"; };
 		89EB39592CEC6CE00011C2BD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		89EB395F2CEC92390011C2BD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		89EB39632CEC94F20011C2BD /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		89EB39652CEC9EF30011C2BD /* CircleBtnAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBtnAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 		89EB39442CEC64C50011C2BD /* SwyptoTracker */ = {
 			isa = PBXGroup;
 			children = (
+				89EB395B2CEC920E0011C2BD /* Core */,
 				89EB39452CEC64C50011C2BD /* SwyptoTrackerApp.swift */,
 				89EB39472CEC64C50011C2BD /* ContentView.swift */,
 				89EB39492CEC64C70011C2BD /* Assets.xcassets */,
@@ -82,6 +89,56 @@
 				89EB39592CEC6CE00011C2BD /* Color.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		89EB395B2CEC920E0011C2BD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				89EB395C2CEC92150011C2BD /* Home */,
+				89EB39612CEC94C20011C2BD /* Components */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		89EB395C2CEC92150011C2BD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				89EB395E2CEC92250011C2BD /* Views */,
+				89EB395D2CEC921C0011C2BD /* ViewModels */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		89EB395D2CEC921C0011C2BD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		89EB395E2CEC92250011C2BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				89EB395F2CEC92390011C2BD /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		89EB39612CEC94C20011C2BD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				89EB39622CEC94D40011C2BD /* CircleButton */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		89EB39622CEC94D40011C2BD /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				89EB39632CEC94F20011C2BD /* CircleButtonView.swift */,
+				89EB39652CEC9EF30011C2BD /* CircleBtnAnimationView.swift */,
+			);
+			path = CircleButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +211,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89EB39662CEC9EF30011C2BD /* CircleBtnAnimationView.swift in Sources */,
 				89EB39522CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld in Sources */,
 				89EB394F2CEC64C70011C2BD /* Persistence.swift in Sources */,
+				89EB39642CEC94F20011C2BD /* CircleButtonView.swift in Sources */,
 				89EB39482CEC64C50011C2BD /* ContentView.swift in Sources */,
+				89EB39602CEC92390011C2BD /* HomeView.swift in Sources */,
 				89EB395A2CEC6CE00011C2BD /* Color.swift in Sources */,
 				89EB39462CEC64C50011C2BD /* SwyptoTrackerApp.swift in Sources */,
 			);
