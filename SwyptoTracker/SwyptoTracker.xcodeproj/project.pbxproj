@@ -13,6 +13,7 @@
 		89EB394D2CEC64C70011C2BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89EB394C2CEC64C70011C2BD /* Preview Assets.xcassets */; };
 		89EB394F2CEC64C70011C2BD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB394E2CEC64C70011C2BD /* Persistence.swift */; };
 		89EB39522CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39502CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld */; };
+		89EB395A2CEC6CE00011C2BD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39592CEC6CE00011C2BD /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		89EB394C2CEC64C70011C2BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89EB394E2CEC64C70011C2BD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		89EB39512CEC64C70011C2BD /* SwyptoTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwyptoTracker.xcdatamodel; sourceTree = "<group>"; };
+		89EB39592CEC6CE00011C2BD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				89EB39492CEC64C70011C2BD /* Assets.xcassets */,
 				89EB394E2CEC64C70011C2BD /* Persistence.swift */,
 				89EB39502CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld */,
+				89EB39582CEC6CC70011C2BD /* Extension */,
 				89EB394B2CEC64C70011C2BD /* Preview Content */,
 			);
 			path = SwyptoTracker;
@@ -71,6 +74,14 @@
 				89EB394C2CEC64C70011C2BD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		89EB39582CEC6CC70011C2BD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				89EB39592CEC6CE00011C2BD /* Color.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 				89EB39522CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld in Sources */,
 				89EB394F2CEC64C70011C2BD /* Persistence.swift in Sources */,
 				89EB39482CEC64C50011C2BD /* ContentView.swift in Sources */,
+				89EB395A2CEC6CE00011C2BD /* Color.swift in Sources */,
 				89EB39462CEC64C50011C2BD /* SwyptoTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
