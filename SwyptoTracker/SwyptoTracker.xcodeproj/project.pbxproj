@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89445DAF2D379E7100878A5E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89445DAE2D379E7100878A5E /* HomeViewModel.swift */; };
 		89A130422D365F260080AD71 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A130412D365F260080AD71 /* CoinRowView.swift */; };
 		89A130442D3661FD0080AD71 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A130432D3661FD0080AD71 /* PreviewProvider.swift */; };
 		89A130462D36761C0080AD71 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A130452D36761C0080AD71 /* Double.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89445DAE2D379E7100878A5E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		89A130412D365F260080AD71 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		89A130432D3661FD0080AD71 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		89A130452D36761C0080AD71 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		89EB395D2CEC921C0011C2BD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				89445DAE2D379E7100878A5E /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				89EB39482CEC64C50011C2BD /* ContentView.swift in Sources */,
 				89A130442D3661FD0080AD71 /* PreviewProvider.swift in Sources */,
 				89EB39602CEC92390011C2BD /* HomeView.swift in Sources */,
+				89445DAF2D379E7100878A5E /* HomeViewModel.swift in Sources */,
 				89EB395A2CEC6CE00011C2BD /* Color.swift in Sources */,
 				89B3BC882CEEFFDC005FEFD5 /* CoinModel.swift in Sources */,
 				89A130462D36761C0080AD71 /* Double.swift in Sources */,
