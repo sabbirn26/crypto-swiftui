@@ -16,6 +16,7 @@
 		89A596F52D38D5FE0000BF1C /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A596F42D38D5FE0000BF1C /* CoinImageView.swift */; };
 		89A596F72D38DA5C0000BF1C /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A596F62D38DA5C0000BF1C /* CoinImageService.swift */; };
 		89A596F92D38DD5B0000BF1C /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A596F82D38DD5B0000BF1C /* CoinImageViewModel.swift */; };
+		89A596FB2D3903820000BF1C /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A596FA2D3903820000BF1C /* LocalFileManager.swift */; };
 		89B3BC882CEEFFDC005FEFD5 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B3BC872CEEFFDC005FEFD5 /* CoinModel.swift */; };
 		89EB39462CEC64C50011C2BD /* SwyptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39452CEC64C50011C2BD /* SwyptoTrackerApp.swift */; };
 		89EB39482CEC64C50011C2BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39472CEC64C50011C2BD /* ContentView.swift */; };
@@ -39,6 +40,7 @@
 		89A596F42D38D5FE0000BF1C /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
 		89A596F62D38DA5C0000BF1C /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
 		89A596F82D38DD5B0000BF1C /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
+		89A596FA2D3903820000BF1C /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		89B3BC872CEEFFDC005FEFD5 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		89EB39422CEC64C50011C2BD /* SwyptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwyptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EB39452CEC64C50011C2BD /* SwyptoTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwyptoTrackerApp.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				89445DB42D37CC6A00878A5E /* NetworkingManager.swift */,
+				89A596FA2D3903820000BF1C /* LocalFileManager.swift */,
 			);
 			path = "Utilities ";
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				89A596F72D38DA5C0000BF1C /* CoinImageService.swift in Sources */,
 				89445DB52D37CC6A00878A5E /* NetworkingManager.swift in Sources */,
 				89A130422D365F260080AD71 /* CoinRowView.swift in Sources */,
+				89A596FB2D3903820000BF1C /* LocalFileManager.swift in Sources */,
 				89A596F52D38D5FE0000BF1C /* CoinImageView.swift in Sources */,
 				89EB394F2CEC64C70011C2BD /* Persistence.swift in Sources */,
 				89EB39642CEC94F20011C2BD /* CircleButtonView.swift in Sources */,
