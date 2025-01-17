@@ -11,6 +11,7 @@ import Combine
 class HomeViewModel : ObservableObject {
     @Published var allCoins : [CoinModel] = []
     @Published var portfoliCoins: [CoinModel] = []
+    @Published var searchText : String = ""
     
     private var dataService = CoinDataService()
     
