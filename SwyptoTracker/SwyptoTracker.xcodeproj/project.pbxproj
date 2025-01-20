@@ -28,6 +28,8 @@
 		89A596F92D38DD5B0000BF1C /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A596F82D38DD5B0000BF1C /* CoinImageViewModel.swift */; };
 		89A596FB2D3903820000BF1C /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A596FA2D3903820000BF1C /* LocalFileManager.swift */; };
 		89B3BC882CEEFFDC005FEFD5 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B3BC872CEEFFDC005FEFD5 /* CoinModel.swift */; };
+		89E6FC832D3E1449000D5897 /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89E6FC812D3E1449000D5897 /* PortfolioContainer.xcdatamodeld */; };
+		89E6FC852D3E1559000D5897 /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6FC842D3E1559000D5897 /* PortfolioDataService.swift */; };
 		89EB39462CEC64C50011C2BD /* SwyptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39452CEC64C50011C2BD /* SwyptoTrackerApp.swift */; };
 		89EB39482CEC64C50011C2BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39472CEC64C50011C2BD /* ContentView.swift */; };
 		89EB394A2CEC64C70011C2BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89EB39492CEC64C70011C2BD /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		89A596F82D38DD5B0000BF1C /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
 		89A596FA2D3903820000BF1C /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		89B3BC872CEEFFDC005FEFD5 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		89E6FC822D3E1449000D5897 /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
+		89E6FC842D3E1559000D5897 /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
 		89EB39422CEC64C50011C2BD /* SwyptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwyptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EB39452CEC64C50011C2BD /* SwyptoTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwyptoTrackerApp.swift; sourceTree = "<group>"; };
 		89EB39472CEC64C50011C2BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				89445DB12D37A9E000878A5E /* CoinDataService.swift */,
 				2075E2CF2D3BDF2100118DDF /* MarketDataService.swift */,
 				89A596F62D38DA5C0000BF1C /* CoinImageService.swift */,
+				89E6FC842D3E1559000D5897 /* PortfolioDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				89B3BC872CEEFFDC005FEFD5 /* CoinModel.swift */,
 				2075E2C72D3BC41100118DDF /* StatisticModel.swift */,
 				2075E2CD2D3BDC1100118DDF /* MarketDataModel.swift */,
+				89E6FC812D3E1449000D5897 /* PortfolioContainer.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -322,6 +328,8 @@
 				89A596F72D38DA5C0000BF1C /* CoinImageService.swift in Sources */,
 				89445DB52D37CC6A00878A5E /* NetworkingManager.swift in Sources */,
 				89A130422D365F260080AD71 /* CoinRowView.swift in Sources */,
+				89E6FC852D3E1559000D5897 /* PortfolioDataService.swift in Sources */,
+				89E6FC832D3E1449000D5897 /* PortfolioContainer.xcdatamodeld in Sources */,
 				89A596FB2D3903820000BF1C /* LocalFileManager.swift in Sources */,
 				89A596F52D38D5FE0000BF1C /* CoinImageView.swift in Sources */,
 				89EB394F2CEC64C70011C2BD /* Persistence.swift in Sources */,
@@ -550,6 +558,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		89E6FC812D3E1449000D5897 /* PortfolioContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				89E6FC822D3E1449000D5897 /* PortfolioContainer.xcdatamodel */,
+			);
+			currentVersion = 89E6FC822D3E1449000D5897 /* PortfolioContainer.xcdatamodel */;
+			name = PortfolioContainer.xcdatamodeld;
+			path = "/Users/newroztech/Desktop/Personal Project And R&D/crypto-swiftui/SwyptoTracker/SwyptoTracker/Models/PortfolioContainer.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		89EB39502CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
