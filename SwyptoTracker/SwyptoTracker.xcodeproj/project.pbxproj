@@ -34,8 +34,6 @@
 		89EB39482CEC64C50011C2BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39472CEC64C50011C2BD /* ContentView.swift */; };
 		89EB394A2CEC64C70011C2BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89EB39492CEC64C70011C2BD /* Assets.xcassets */; };
 		89EB394D2CEC64C70011C2BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89EB394C2CEC64C70011C2BD /* Preview Assets.xcassets */; };
-		89EB394F2CEC64C70011C2BD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB394E2CEC64C70011C2BD /* Persistence.swift */; };
-		89EB39522CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39502CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld */; };
 		89EB395A2CEC6CE00011C2BD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39592CEC6CE00011C2BD /* Color.swift */; };
 		89EB39602CEC92390011C2BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB395F2CEC92390011C2BD /* HomeView.swift */; };
 		89EB39642CEC94F20011C2BD /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39632CEC94F20011C2BD /* CircleButtonView.swift */; };
@@ -71,8 +69,6 @@
 		89EB39472CEC64C50011C2BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89EB39492CEC64C70011C2BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89EB394C2CEC64C70011C2BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		89EB394E2CEC64C70011C2BD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		89EB39512CEC64C70011C2BD /* SwyptoTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwyptoTracker.xcdatamodel; sourceTree = "<group>"; };
 		89EB39592CEC6CE00011C2BD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		89EB395F2CEC92390011C2BD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		89EB39632CEC94F20011C2BD /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
@@ -165,8 +161,6 @@
 				89EB395B2CEC920E0011C2BD /* Core */,
 				89EB39472CEC64C50011C2BD /* ContentView.swift */,
 				89EB39492CEC64C70011C2BD /* Assets.xcassets */,
-				89EB394E2CEC64C70011C2BD /* Persistence.swift */,
-				89EB39502CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld */,
 				89EB394B2CEC64C70011C2BD /* Preview Content */,
 			);
 			path = SwyptoTracker;
@@ -322,7 +316,6 @@
 			files = (
 				20EE87FA2D3A86300027FF52 /* SearchBarView.swift in Sources */,
 				89EB39662CEC9EF30011C2BD /* CircleBtnAnimationView.swift in Sources */,
-				89EB39522CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld in Sources */,
 				8939F8382D3CD77500713233 /* PortfolioView.swift in Sources */,
 				89445DB22D37A9E000878A5E /* CoinDataService.swift in Sources */,
 				89A596F72D38DA5C0000BF1C /* CoinImageService.swift in Sources */,
@@ -332,7 +325,6 @@
 				89E6FC832D3E1449000D5897 /* PortfolioContainer.xcdatamodeld in Sources */,
 				89A596FB2D3903820000BF1C /* LocalFileManager.swift in Sources */,
 				89A596F52D38D5FE0000BF1C /* CoinImageView.swift in Sources */,
-				89EB394F2CEC64C70011C2BD /* Persistence.swift in Sources */,
 				89EB39642CEC94F20011C2BD /* CircleButtonView.swift in Sources */,
 				89A596F92D38DD5B0000BF1C /* CoinImageViewModel.swift in Sources */,
 				2075E2C82D3BC41100118DDF /* StatisticModel.swift in Sources */,
@@ -566,16 +558,6 @@
 			currentVersion = 89E6FC822D3E1449000D5897 /* PortfolioContainer.xcdatamodel */;
 			name = PortfolioContainer.xcdatamodeld;
 			path = "/Users/newroztech/Desktop/Personal Project And R&D/crypto-swiftui/SwyptoTracker/SwyptoTracker/Models/PortfolioContainer.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		89EB39502CEC64C70011C2BD /* SwyptoTracker.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				89EB39512CEC64C70011C2BD /* SwyptoTracker.xcdatamodel */,
-			);
-			currentVersion = 89EB39512CEC64C70011C2BD /* SwyptoTracker.xcdatamodel */;
-			path = SwyptoTracker.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
