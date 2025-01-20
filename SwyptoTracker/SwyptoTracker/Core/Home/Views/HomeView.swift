@@ -97,6 +97,9 @@ extension HomeView {
             }
         }
         .listStyle(.plain)
+        .refreshable {
+            vm.reloadCoinData()
+        }
     }
     
     var columnTitle : some View {
