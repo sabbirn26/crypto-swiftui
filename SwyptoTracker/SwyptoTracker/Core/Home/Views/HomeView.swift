@@ -84,6 +84,9 @@ extension HomeView {
             }
         }
         .listStyle(.plain)
+        .refreshable {
+            vm.reloadCoinData()
+        }
     }
     
     var protfolioCoinsList : some View {

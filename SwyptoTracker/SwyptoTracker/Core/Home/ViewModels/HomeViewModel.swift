@@ -44,16 +44,7 @@ class HomeViewModel : ObservableObject {
         //update portfolioCoins
         $allCoins
             .combineLatest(portfolioDataService.$savedEntities)
-            .map{(coinModels, protfolioEntities) -> [CoinModel] in
-                coinModels
-                    .compactMap { (coin) -> CoinModel? in
-                        guard let entity = protfolioEntities.first(where: {$0.coinID == coin.id}) else {
-                            return nil
-                        }
-                        
-                        return coin.updateHoldings(amount: entity.amount)
-                    }
-            }
+            .map(mapAllCoinsToPortCoins)
             .sink { [weak self] (returnedCoins) in
                 self?.portfoliCoins = returnedCoins
             }
@@ -75,6 +66,12 @@ class HomeViewModel : ObservableObject {
         portfolioDataService.updatePortfolio(coin: coin, amount: amount)
     }
     
+    func reloadCoinData(){
+        coinDataService.getCoins()
+        marketdataService.getMarketData()
+        HapticManager.notification(type: .success)
+    }
+    
     private func filterCoins(text: String, coins: [CoinModel]) -> [CoinModel]{
         guard !text.isEmpty else {
             return coins
@@ -88,6 +85,17 @@ class HomeViewModel : ObservableObject {
             coin.id.lowercased().contains(lowercasedText)
             
         }
+    }
+    
+    private func mapAllCoinsToPortCoins(allCoins: [CoinModel], protfolioEntities: [PortfolioEntity]) -> [CoinModel]{
+        allCoins
+            .compactMap { (coin) -> CoinModel? in
+                guard let entity = protfolioEntities.first(where: {$0.coinID == coin.id}) else {
+                    return nil
+                }
+                
+                return coin.updateHoldings(amount: entity.amount)
+            }
     }
     
     private func mapMarketGlobalData(marketDataModel: MarketDataModel?, portfolioCoins: [CoinModel]) -> [StatisticModel]{
