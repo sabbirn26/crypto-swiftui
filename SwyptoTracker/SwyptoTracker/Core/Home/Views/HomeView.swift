@@ -30,7 +30,7 @@ struct HomeView: View {
                 
                 if !showPortfolio {
                     allCoinsList
-                    .transition(.move(edge: .leading))
+                        .transition(.move(edge: .leading))
                 }
                 
                 if showPortfolio {
@@ -104,13 +104,46 @@ extension HomeView {
     
     var columnTitle : some View {
         HStack{
-            Text("Coin")
+            HStack(spacing: 4){
+                Text("Coin")
+                Image(systemName: "chevron.down")
+                    .opacity((vm.sortOptions == .cRank || vm.sortOptions == .cRankRev) ? 1.0 : 0.0)
+                    .rotationEffect(Angle(degrees: vm.sortOptions == .cRank ? 0 : 180))
+            }
+            .onTapGesture {
+                withAnimation(.default){
+                    vm.sortOptions = vm.sortOptions == .cRank ? .cRankRev : .cRank
+                }
+            }
+            
             Spacer()
             if showPortfolio{
-                Text("Holdings")
+                HStack(spacing: 4){
+                    Text("Holdings")
+                    Image(systemName: "chevron.down")
+                        .opacity((vm.sortOptions == .holdings || vm.sortOptions == .holdingRev) ? 1.0 : 0.0)
+                        .rotationEffect(Angle(degrees: vm.sortOptions == .holdings ? 0 : 180))
+                }
+                .onTapGesture {
+                    withAnimation(.default){
+                        vm.sortOptions = vm.sortOptions == .holdings ? .holdingRev : .holdings
+                    }
+                }
+                
             }
-            Text("Price")
-                .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            HStack(spacing: 4){
+                Text("Price")
+                Image(systemName: "chevron.down")
+                    .opacity(showPortfolio ? 0.0 : 1.0)
+                    .opacity((vm.sortOptions == .price || vm.sortOptions == .priceRev) ? 1.0 : 0.0)
+                    .rotationEffect(Angle(degrees: vm.sortOptions == .price ? 0 : 180))
+            }
+            .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            .onTapGesture {
+                withAnimation(.default){
+                    vm.sortOptions = vm.sortOptions == .price ? .priceRev : .price
+                }
+            }
         }
         .font(.caption)
         .foregroundStyle(Color.theme.scndTextColor)
