@@ -109,13 +109,6 @@
 			path = "Utilities ";
 			sourceTree = "<group>";
 		};
-		89A130402D3651510080AD71 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		89A596F32D38D5DC0000BF1C /* CoinImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +184,6 @@
 		89EB395B2CEC920E0011C2BD /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				89A130402D3651510080AD71 /* New Group */,
 				89EB395C2CEC92150011C2BD /* Home */,
 				89EB39612CEC94C20011C2BD /* Components */,
 			);
