@@ -23,15 +23,30 @@ struct DetailsView: View {
     
     init(coin: CoinModel) {
         _vm = StateObject(wrappedValue: DetailsViewModel(coin: coin))
-        print("Init Details View for -----> \(coin.name)")
+//        print("Init Details View for -----> \(coin.name)")
     }
     var body: some View {
-            Text("Hello!")
+        ScrollView{
+            VStack{
+                Text("")
+                    .frame(height: 150)
+                
+                Text("Overview")
+                    .font(.title)
+                    .bold()
+                    .foregroundStyle(Color.theme.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
+        .navigationTitle(vm.coin.name)
     }
 }
 
 struct DetailsView_Previews : PreviewProvider {
     static var previews: some View{
-        DetailsView(coin: dev.coin)
+        NavigationView {
+            DetailsView(coin: dev.coin)
+
+        }
     }
 }
