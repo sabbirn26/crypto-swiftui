@@ -19,7 +19,11 @@ struct DetailsLoadingView : View {
 }
 
 struct DetailsView: View {
-    @StateObject var vm: DetailsViewModel
+    @StateObject private var vm: DetailsViewModel
+    private let colmns: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+    ]
     
     init(coin: CoinModel) {
         _vm = StateObject(wrappedValue: DetailsViewModel(coin: coin))
@@ -36,7 +40,24 @@ struct DetailsView: View {
                     .bold()
                     .foregroundStyle(Color.theme.accent)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                Divider()
+                
+                LazyVGrid(
+                    columns: colmns,
+                    alignment: .center,
+                    spacing: nil, pinnedViews: []) {
+                        Text("Placeholder")
+                        Text("Placeholder")
+                    }
+                
+                Text("Additional Details")
+                    .font(.title)
+                    .bold()
+                    .foregroundStyle(Color.theme.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Divider()
             }
+            .padding()
         }
         .navigationTitle(vm.coin.name)
     }
