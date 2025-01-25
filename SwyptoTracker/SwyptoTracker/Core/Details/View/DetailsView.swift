@@ -24,6 +24,7 @@ struct DetailsView: View {
         GridItem(.flexible()),
         GridItem(.flexible()),
     ]
+    private var spacing: CGFloat = 30
     
     init(coin: CoinModel) {
         _vm = StateObject(wrappedValue: DetailsViewModel(coin: coin))
@@ -44,11 +45,15 @@ struct DetailsView: View {
                 
                 LazyVGrid(
                     columns: colmns,
-                    alignment: .center,
-                    spacing: nil, pinnedViews: []) {
-                        Text("Placeholder")
-                        Text("Placeholder")
-                    }
+                    alignment: .leading,
+                    spacing: spacing,
+                    pinnedViews: [],
+                    content: {
+                        ForEach(0..<6){_ in
+                            StatisticView(stat: StatisticModel(title: "Demo Title", value: "Demo Value"))
+                            
+                        }
+                    })
                 
                 Text("Additional Details")
                     .font(.title)
@@ -56,6 +61,18 @@ struct DetailsView: View {
                     .foregroundStyle(Color.theme.accent)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 Divider()
+                
+                LazyVGrid(
+                    columns: colmns,
+                    alignment: .leading,
+                    spacing: spacing,
+                    pinnedViews: [],
+                    content: {
+                        ForEach(0..<6){_ in
+                            StatisticView(stat: StatisticModel(title: "Demo Title", value: "Demo Value"))
+                            
+                        }
+                    })
             }
             .padding()
         }
