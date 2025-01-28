@@ -36,11 +36,7 @@ struct DetailsView: View {
                 Text("")
                     .frame(height: 150)
                 
-                Text("Overview")
-                    .font(.title)
-                    .bold()
-                    .foregroundStyle(Color.theme.accent)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                overviewSection
                 Divider()
                 
                 LazyVGrid(
@@ -49,8 +45,8 @@ struct DetailsView: View {
                     spacing: spacing,
                     pinnedViews: [],
                     content: {
-                        ForEach(0..<6){_ in
-                            StatisticView(stat: StatisticModel(title: "Demo Title", value: "Demo Value"))
+                        ForEach(vm.overviewStat){ stat in
+                            StatisticView(stat: stat)
                             
                         }
                     })
@@ -68,8 +64,8 @@ struct DetailsView: View {
                     spacing: spacing,
                     pinnedViews: [],
                     content: {
-                        ForEach(0..<6){_ in
-                            StatisticView(stat: StatisticModel(title: "Demo Title", value: "Demo Value"))
+                        ForEach(vm.additionalStat){ stat in
+                            StatisticView(stat: stat)
                             
                         }
                     })
@@ -87,4 +83,20 @@ struct DetailsView_Previews : PreviewProvider {
 
         }
     }
+}
+
+extension DetailsView {
+    //MARK: VIEW PART
+    private var overviewSection : some View {
+        VStack{
+            Text("Overview")
+                .font(.title)
+                .bold()
+                .foregroundStyle(Color.theme.accent)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Divider()
+        }
+    }
+    
+    //MARK: METHOD
 }
