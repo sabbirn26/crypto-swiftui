@@ -49,9 +49,10 @@ struct ChartView: View {
             chartSection
                 .frame(height: 200)
                 .background(verticalGridSection)
-                .overlay (chartYAxis, alignment: .leading)
+                .overlay (chartYAxis.padding(.horizontal, 4), alignment: .leading)
             
             shortDateLabels
+                .padding(.horizontal, 4)
         }
         .font(.caption)
         .foregroundStyle(Color.theme.scndTextColor)
@@ -59,6 +60,7 @@ struct ChartView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 withAnimation(.linear(duration: 2.0)) {
                     percentage = 1.0
+                    print("<-------------- DEBUG ANIMATION -------------->")
                 }
             }
         }
@@ -67,8 +69,7 @@ struct ChartView: View {
 
 struct ChartView_Previews : PreviewProvider {
     static var previews: some View{
-            ChartView(coin: dev.coin)
-//            .frame(width: 100)
+        ChartView(coin: dev.coin)
     }
 }
 
@@ -90,7 +91,7 @@ extension ChartView {
                     path.addLine(to: CGPoint(x: xPosition, y: yPosition))
                 }
             }
-            .trimmedPath(from: 0, to: percentage)
+            .trim(from: 0, to: percentage)
             .stroke(lineColor, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
             .shadow(color: lineColor, radius: 10, x: 0.0, y: 10)
             .shadow(color: lineColor.opacity(0.5), radius: 10, x: 0.0, y: 20)

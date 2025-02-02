@@ -33,19 +33,21 @@ struct DetailsView: View {
     var body: some View {
         ScrollView{
             VStack{
-                Text("")
-                    .frame(height: 150)
-                
-                overviewTitle
-                Divider()
-                overviewGrid
-                
-                additionalTitle
-                Divider()
-                additionalGrid
-                
+                ChartView(coin: vm.coin)
+                    .padding(.vertical)
+                VStack{
+                    overviewTitle
+                    Divider()
+                    overviewGrid
+                    
+                    additionalTitle
+                    Divider()
+                    additionalGrid
+                    
+                }
+                .padding()
             }
-            .padding()
+            
         }
         .navigationTitle(vm.coin.name)
         .toolbar {
