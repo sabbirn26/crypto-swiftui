@@ -40,9 +40,8 @@ struct ChartView: View {
     var body: some View {
         chartSection
             .frame(height: 200)
-            .background(
-                
-            )
+            .background(verticalGridSection)
+            .overlay (chartYAxis, alignment: .leading)
     }
 }
 
@@ -74,5 +73,26 @@ extension ChartView {
             .stroke(lineColor, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
         }
     }
+    
+    private var verticalGridSection : some View {
+        VStack{
+            Divider()
+            Spacer()
+            Divider()
+            Spacer()
+            Divider()
+        }
+    }
+    
+    private var chartYAxis : some View {
+        VStack{
+            Text(maxY.formattedWithAbbreviations())
+            Spacer()
+            Text(((maxY + minY) / 2).formattedWithAbbreviations())
+            Spacer()
+            Text(minY.formattedWithAbbreviations())
+        }
+    }
+    
     
 }
