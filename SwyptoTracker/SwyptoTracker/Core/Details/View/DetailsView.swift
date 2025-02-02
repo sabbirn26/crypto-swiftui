@@ -36,39 +36,14 @@ struct DetailsView: View {
                 Text("")
                     .frame(height: 150)
                 
-                overviewSection
+                overviewTitle
                 Divider()
+                overviewGrid
                 
-                LazyVGrid(
-                    columns: colmns,
-                    alignment: .leading,
-                    spacing: spacing,
-                    pinnedViews: [],
-                    content: {
-                        ForEach(vm.overviewStat){ stat in
-                            StatisticView(stat: stat)
-                            
-                        }
-                    })
-                
-                Text("Additional Details")
-                    .font(.title)
-                    .bold()
-                    .foregroundStyle(Color.theme.accent)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                additionalTitle
                 Divider()
+                additionalGrid
                 
-                LazyVGrid(
-                    columns: colmns,
-                    alignment: .leading,
-                    spacing: spacing,
-                    pinnedViews: [],
-                    content: {
-                        ForEach(vm.additionalStat){ stat in
-                            StatisticView(stat: stat)
-                            
-                        }
-                    })
             }
             .padding()
         }
@@ -87,15 +62,48 @@ struct DetailsView_Previews : PreviewProvider {
 
 extension DetailsView {
     //MARK: VIEW PART
-    private var overviewSection : some View {
-        VStack{
+    private var overviewTitle : some View {
             Text("Overview")
                 .font(.title)
                 .bold()
                 .foregroundStyle(Color.theme.accent)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            Divider()
-        }
+    }
+    
+    private var overviewGrid : some View {
+        LazyVGrid(
+            columns: colmns,
+            alignment: .leading,
+            spacing: spacing,
+            pinnedViews: [],
+            content: {
+                ForEach(vm.overviewStat){ stat in
+                    StatisticView(stat: stat)
+                    
+                }
+            })
+    }
+    
+    private var additionalTitle : some View {
+        Text("Additional Details")
+            .font(.title)
+            .bold()
+            .foregroundStyle(Color.theme.accent)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    private var additionalGrid : some View {
+        LazyVGrid(
+            columns: colmns,
+            alignment: .leading,
+            spacing: spacing,
+            pinnedViews: [],
+            content: {
+                ForEach(vm.additionalStat){ stat in
+                    StatisticView(stat: stat)
+                    
+                }
+            })
     }
     
     //MARK: METHOD
