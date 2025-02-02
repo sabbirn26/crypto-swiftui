@@ -48,6 +48,11 @@ struct DetailsView: View {
             .padding()
         }
         .navigationTitle(vm.coin.name)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                navigationImageAndText
+            }
+        }
     }
 }
 
@@ -104,6 +109,17 @@ extension DetailsView {
                     
                 }
             })
+    }
+    
+    private var navigationImageAndText : some View {
+        HStack{
+            Text(vm.coin.symbol.uppercased())
+                .font(.headline)
+                .foregroundStyle(Color.theme.scndTextColor)
+            
+            CoinImageView(coin: vm.coin)
+                .frame(width: 25, height: 25)
+        }
     }
     
     //MARK: METHOD
