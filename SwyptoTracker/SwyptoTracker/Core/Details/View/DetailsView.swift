@@ -38,8 +38,16 @@ struct DetailsView: View {
                 VStack{
                     overviewTitle
                     Divider()
-                    overviewGrid
                     
+                    ZStack{
+                        if let coinDescription = vm.coinDescription, !coinDescription.isEmpty {
+                            Text(coinDescription)
+                                .font(.caption)
+                                .foregroundStyle(Color.theme.scndTextColor)
+                        }
+                    }
+                    
+                    overviewGrid
                     additionalTitle
                     Divider()
                     additionalGrid
