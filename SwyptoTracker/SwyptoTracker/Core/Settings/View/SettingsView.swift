@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(\.presentationMode) var presentationMode
     let defaultURL = URL(string: "https://google.com/")!
     let swiftfulYoutubeURL = URL(string: "https://www.youtube.com/@SwiftfulThinking")!
     let githubURL = URL(string: "https://youtube.com/")!
     let coingeckoURL = URL(string: "https://coingecko.com/")!
-    let coffeeURL = URL(string: "https://youtube.com/")!
+    let linkedinURL = URL(string: "https://www.linkedin.com/in/sabbirn26/")!
     let personalURL = URL(string: "https://github.com/sabbirn26")!
     var body: some View {
         NavigationView {
@@ -28,7 +29,7 @@ struct SettingsView: View {
             .navigationTitle("Settings")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    XmarkButton(dismiss: {})
+                    XmarkButton(dismiss: xButtonAction)
                 }
             }
         }
@@ -100,7 +101,7 @@ extension SettingsView {
             }
             .padding(.vertical)
             Link("GitHub Profile 🧑🏽‍💻", destination: personalURL)
-            Link("Support Sabbir's coffee addiction ☕️", destination: coffeeURL)
+            Link("Linkedin Profile 🧑🏽‍💻", destination: linkedinURL)
         }
     }
     
@@ -112,5 +113,10 @@ extension SettingsView {
             Link("Company Website", destination: defaultURL)
             Link("Learn More", destination: defaultURL)
         }
+    }
+    
+    //MARK: METHOD PART
+    private func xButtonAction(){
+        presentationMode.wrappedValue.dismiss()
     }
 }
