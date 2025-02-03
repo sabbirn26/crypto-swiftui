@@ -12,6 +12,7 @@ struct PortfolioView: View {
     @State private var selectedCoin: CoinModel? = nil
     @State private var quantityText: String = ""
     @State private var showCheckMark: Bool = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -28,7 +29,7 @@ struct PortfolioView: View {
             .navigationTitle("Edit Protfolio")
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading, content: {
-                    XmarkButton() //button not working
+                    XmarkButton(dismiss: xButtonAction)
                 })
                 
                 ToolbarItem(placement: .navigationBarTrailing, content: {
@@ -171,5 +172,9 @@ extension PortfolioView {
         selectedCoin = nil
         vm.searchText = ""
         quantityText = ""
+    }
+    
+    private func xButtonAction(){
+        presentationMode.wrappedValue.dismiss()
     }
 }

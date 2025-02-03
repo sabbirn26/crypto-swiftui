@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct XmarkButton: View {
-    @Environment(\.presentationMode) var presentationMode
+    let dismiss: () -> Void
     var body: some View {
         Button(action: {
             print("<------- Protfolio bottom sheet dissmissed ------->")
-            presentationMode.wrappedValue.dismiss()
+            dismiss()
         }, label: {
             Image(systemName: "xmark")
                 .font(.headline)
@@ -22,5 +22,5 @@ struct XmarkButton: View {
 }
 
 #Preview {
-    XmarkButton()
+    XmarkButton(dismiss: {})
 }
