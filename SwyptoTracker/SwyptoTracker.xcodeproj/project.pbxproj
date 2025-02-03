@@ -122,6 +122,21 @@
 			path = "Utilities ";
 			sourceTree = "<group>";
 		};
+		897682F32D50BC5500B7FF1E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				897682F42D50BC8500B7FF1E /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		897682F42D50BC8500B7FF1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		898422732D40B62A00004C83 /* Details */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +242,7 @@
 			children = (
 				89EB395C2CEC92150011C2BD /* Home */,
 				898422732D40B62A00004C83 /* Details */,
+				897682F32D50BC5500B7FF1E /* Settings */,
 				89EB39612CEC94C20011C2BD /* Components */,
 			);
 			path = Core;
