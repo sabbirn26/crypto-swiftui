@@ -94,7 +94,7 @@ extension SettingsView {
                     .frame(width : 100, height: 100)
                     .cornerRadius(10)
                 
-                Text("I'm Sabbir, a software engineer and content creator. This project is part of my learning journey.")
+                Text("I'm Sabbir, a software engineer and content creator. This project is part of my learning journey. And project is developed 100% Swift and SwiftUI.")
                     .font(.callout)
                     .fontWeight(.medium)
                     .foregroundStyle(Color.theme.accent)
