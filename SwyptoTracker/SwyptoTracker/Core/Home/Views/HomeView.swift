@@ -109,6 +109,7 @@ extension HomeView {
                     .onTapGesture {
                         segue(coin: coin)
                     }
+                    .listRowBackground(Color.theme.bgColor)
             }
         }
         .listStyle(.plain)
@@ -122,6 +123,7 @@ extension HomeView {
             ForEach(vm.portfoliCoins) { coin in
                 CoinRowView(coin: coin, showHoldingColumn: true)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 0, trailing: 10))
+                    .listRowBackground(Color.theme.bgColor)
             }
         }
         .listStyle(.plain)

@@ -17,11 +17,19 @@ struct SettingsView: View {
     let personalURL = URL(string: "https://github.com/sabbirn26")!
     var body: some View {
         NavigationView {
-            List{
-                personalInfoSection
-                coingeckoSection
-                devSection
-                applicationSection
+            ZStack {
+                Color.theme.bgColor
+                    .ignoresSafeArea()
+                List{
+                    personalInfoSection
+                        .listRowBackground(Color.theme.bgColor.opacity(0.5))
+                    coingeckoSection
+                        .listRowBackground(Color.theme.bgColor.opacity(0.5))
+                    devSection
+                        .listRowBackground(Color.theme.bgColor.opacity(0.5))
+                    applicationSection
+                        .listRowBackground(Color.theme.bgColor.opacity(0.5))
+                }
             }
             .font(.headline)
             .accentColor(.blue)

@@ -48,8 +48,11 @@ struct DetailsView: View {
                 }
                 .padding()
             }
-            
         }
+        .background(
+            Color.theme.bgColor
+                .ignoresSafeArea()
+        )
         .navigationTitle(vm.coin.name)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
