@@ -36,8 +36,14 @@ struct HomeView: View {
                 }
                 
                 if showPortfolio {
-                    protfolioCoinsList
-                        .transition(.move(edge: .trailing))
+                    ZStack(alignment: .top){
+                        if vm.portfoliCoins.isEmpty && vm.searchText.isEmpty{
+                            noPortfolioCoinTextSection
+                        } else {
+                            protfolioCoinsList
+                        }
+                    }
+                    .transition(.move(edge: .trailing))
                 }
                 
                 Spacer(minLength: 0)
@@ -176,6 +182,15 @@ extension HomeView {
         .font(.caption)
         .foregroundStyle(Color.theme.scndTextColor)
         .padding(.horizontal, 10)
+    }
+    
+    private var noPortfolioCoinTextSection : some View {
+        Text("You haven't added any coin to your Portfolio yet. Click the + button to add!! 🧐")
+            .font(.callout)
+            .fontWeight(.medium)
+            .foregroundStyle(Color.theme.accent)
+            .multilineTextAlignment(.center)
+            .padding(50)
     }
     
     

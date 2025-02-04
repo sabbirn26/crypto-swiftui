@@ -22,6 +22,7 @@ class CoinDetailsDataService {
         
         coinDetailsSubscription = NetworkingManager.download(url: url)
             .decode(type: CoinDetailsModel.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] (returnedCoinDetails) in
                 self?.coinDetails = returnedCoinDetails
                 print("<---------------- Coin:\(String(describing: self?.coin.id))'s Details from API ------------------> \n\(returnedCoinDetails)")
