@@ -141,7 +141,7 @@ extension DetailsView {
                         }
 
                     }, label: {
-                        Text(showFullDes ? "Less" : "Read more...")
+                        Text(showFullDes ? "Less 🔼" : "Read more 🔽")
                             .font(.caption)
                             .fontWeight(.bold)
                             .padding(.vertical, 4)
