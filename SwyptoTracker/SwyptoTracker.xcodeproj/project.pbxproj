@@ -37,6 +37,7 @@
 		89B8E4622D4210510036A80A /* CoinDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B8E4612D4210510036A80A /* CoinDetailsModel.swift */; };
 		89B8E4642D4215B90036A80A /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B8E4632D4215B90036A80A /* DetailsViewModel.swift */; };
 		89B8E4662D4216790036A80A /* CoinDetailsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B8E4652D4216790036A80A /* CoinDetailsDataService.swift */; };
+		89D32F7F2D51D9C300C67EFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D32F7E2D51D9C300C67EFA /* LaunchScreen.storyboard */; };
 		89E6FC852D3E1559000D5897 /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6FC842D3E1559000D5897 /* PortfolioDataService.swift */; };
 		89E6FC872D3E54D0000D5897 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6FC862D3E54D0000D5897 /* HapticManager.swift */; };
 		89EB39462CEC64C50011C2BD /* SwyptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EB39452CEC64C50011C2BD /* SwyptoTrackerApp.swift */; };
@@ -79,6 +80,8 @@
 		89B8E4612D4210510036A80A /* CoinDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsModel.swift; sourceTree = "<group>"; };
 		89B8E4632D4215B90036A80A /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		89B8E4652D4216790036A80A /* CoinDetailsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsDataService.swift; sourceTree = "<group>"; };
+		89D32F7B2D51D91600C67EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		89D32F7E2D51D9C300C67EFA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89E6FC842D3E1559000D5897 /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
 		89E6FC862D3E54D0000D5897 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		89EB39422CEC64C50011C2BD /* SwyptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwyptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +191,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		89D32F7C2D51D98500C67EFA /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				89D32F7D2D51D9A200C67EFA /* View */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		89D32F7D2D51D9A200C67EFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89D32F7E2D51D9C300C67EFA /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		89EB39392CEC64C50011C2BD = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +226,7 @@
 		89EB39442CEC64C50011C2BD /* SwyptoTracker */ = {
 			isa = PBXGroup;
 			children = (
+				89D32F7B2D51D91600C67EFA /* Info.plist */,
 				89EB39452CEC64C50011C2BD /* SwyptoTrackerApp.swift */,
 				89445DB32D37CC4300878A5E /* Utilities  */,
 				89EB39582CEC6CC70011C2BD /* Extension */,
@@ -243,6 +263,7 @@
 		89EB395B2CEC920E0011C2BD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				89D32F7C2D51D98500C67EFA /* Launch */,
 				89EB395C2CEC92150011C2BD /* Home */,
 				898422732D40B62A00004C83 /* Details */,
 				897682F32D50BC5500B7FF1E /* Settings */,
@@ -358,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D32F7F2D51D9C300C67EFA /* LaunchScreen.storyboard in Resources */,
 				89EB394D2CEC64C70011C2BD /* Preview Assets.xcassets in Resources */,
 				89EB394A2CEC64C70011C2BD /* Assets.xcassets in Resources */,
 			);
@@ -543,10 +565,12 @@
 				DEVELOPMENT_TEAM = VLN82665RD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwyptoTracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Swypto Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -572,10 +596,12 @@
 				DEVELOPMENT_TEAM = VLN82665RD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwyptoTracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Swypto Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
