@@ -36,6 +36,7 @@ Screenshots 📱
     </td>
   </tr>
 </table>
+
 ## Features 🚀
 
 - **Real-time Cryptocurrency Tracking**
